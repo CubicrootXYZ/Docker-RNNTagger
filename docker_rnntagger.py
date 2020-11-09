@@ -1,4 +1,4 @@
-import subprocess, os, falcon
+import subprocess, os, falcon, json
 from falcon import uri
 
 class GetTags():
@@ -15,8 +15,7 @@ class GetTags():
             f = open("/opt/app/RNNTagger/test.txt", "w")
             f.write(string)
             f.close()
-        except:
-            except Exception as e:
+        except Exception as e:
             error=e
 
         try:
