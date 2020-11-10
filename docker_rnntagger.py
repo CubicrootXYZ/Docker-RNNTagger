@@ -73,3 +73,4 @@ class GetLangs():
 
 api = falcon.API()
 api.add_route('/gettags', GetTags())
+api.add_route('/getlangs', GetLangs())
