@@ -9,7 +9,7 @@ Unfortunately you have to build the container yourself with this easy steps:
 
 1. Create a folder on your linux system with docker
 2. Copy the `Dockerfile` there
-3. Run in the same folder: `docker build --no-cache -t imagename` (change imagename to your desired image name
+3. Run in the same folder: `docker build --no-cache -t imagename .` (change imagename to your desired image name
 
 Afterwards you simply can run the container with `docker run -d -p 80:8080 imagename`. Change the port according to your needs. You might want to use docker compose for this.
 
