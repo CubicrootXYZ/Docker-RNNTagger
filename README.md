@@ -5,7 +5,7 @@ This tool is not designed for use in a producitve environment. It is a simple wo
 
 ## Installation
 
-Because the license of RNNTagger forbids the redistribution of itself I am not able to share the docker image with you until I get a separate license. 
+Because the license of RNNTagger forbids the redistribution of itself I am not able to share the docker image with you. 
 
 Unfortunately you have to build the container yourself with this easy steps:
 
