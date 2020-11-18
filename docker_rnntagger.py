@@ -2,10 +2,20 @@ import subprocess, os, falcon, json
 from falcon import uri
 
 class GetTags():
+    """Class for the tagging endpoint, receives text, tags it and sends everything back
+    """
     def __init__(self):
+        """actually doing nothing
+        """
         pass
 
     def on_get(self, req, resp):
+        """handles a get request on the /gettags endpoint
+
+        Args:
+            req (-): the request object
+            resp (-): the response object
+        """
         resp.set_header('Access-Control-Allow-Origin', '*')
         resp.set_header('Access-Control-Allow-Methods', 'GET')
         resp.set_header('Access-Control-Allow-Headers', 'Content-Type')
@@ -55,10 +65,20 @@ class GetTags():
             resp.body = json.dumps({"status": "error occured", "error": str(error)}) 
 
 class GetLangs():
+    """class for handling the language endpoint
+    """
     def __init__(self):
+        """another empty function
+        """
         pass
 
     def on_get(self, req, resp):
+        """handles get requests on the /getlangs endpoint
+
+        Args:
+            req (-): request object
+            resp (-): response object
+        """
         resp.set_header('Access-Control-Allow-Origin', '*')
         resp.set_header('Access-Control-Allow-Methods', 'GET')
         resp.set_header('Access-Control-Allow-Headers', 'Content-Type')
@@ -71,6 +91,7 @@ class GetLangs():
         
         resp.body = json.dumps({"languages": langs})
 
+# create an instance and all endpoints
 api = falcon.API()
 api.add_route('/gettags', GetTags())
 api.add_route('/getlangs', GetLangs())
