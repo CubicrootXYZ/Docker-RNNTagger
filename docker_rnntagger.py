@@ -148,5 +148,6 @@ class GetLangs():
 
 # create an instance and all endpoints
 api = falcon.API()
+api.req_options.auto_parse_from_urlencoded = True
 api.add_route('/gettags', GetTags())
 api.add_route('/getlangs', GetLangs())
