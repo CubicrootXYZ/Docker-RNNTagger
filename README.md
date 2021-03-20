@@ -33,6 +33,25 @@ string: your text to stemm
 
 Returns a List with sentences, sentences are lists with a dict for each word with `original`, `tag` and `root`.
 
+### GetTags (POST))
+
+Tags all words and stemms them to their root word. Uses JSON encoding. This endpoint is easier to use for heavy requests.
+
+Url: `/gettags`
+
+**Parameters (POST)**
+
+Use json formatting!
+
+lang: Language to tag
+
+string: your text to stemm
+
+**Returns**
+
+Returns a List with sentences, sentences are lists with a dict for each word with `original`, `tag` and `root`.
+
+
 ### GetLangs
 
 List all available languages.

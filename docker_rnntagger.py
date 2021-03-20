@@ -65,7 +65,7 @@ class GetTags():
             resp.body = json.dumps({"status": "error occured", "error": str(error)})
 
     def on_post(self, req, resp):
-        """handles a post request on the /gettags endpoint
+        """handles a post request on the /gettags endpoint - Uses JSON decoding instead of urlencoding
 
         Args:
             req (-): the request object
