@@ -82,8 +82,9 @@ class GetTags():
                 langs.append(f.replace("rnn-tagger-", "").replace(".sh", ""))
 
         try:
-            string = req.params["string"]
-            lang = req.params["lang"]
+            data = json.loads(req.bounded_stream.read().decode("utf-8"))
+            string = data["string"]
+            lang = data["lang"]
             f = open("/opt/app/RNNTagger/test.txt", "w")
             f.write(string)
             f.close()
